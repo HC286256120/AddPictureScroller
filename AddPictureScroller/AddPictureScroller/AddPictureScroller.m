@@ -77,6 +77,7 @@
     const CGFloat originalWidth = [self imageArrayWidth];
     UIImageView *aImageView=[[UIImageView alloc] initWithFrame:CGRectMake(originalWidth > 0 ? originalWidth + pictureInset : 0, 0, pictureHeight, pictureHeight)];
     aImageView.userInteractionEnabled = YES;
+    aImageView.contentMode = UIViewContentModeScaleAspectFit;
     [aImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleImageViewTapped:)]];
     aImageView.image = image;
     [imageViewArray addObject:aImageView];
