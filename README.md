@@ -25,6 +25,7 @@ It's just bloody easy to use this kit. Before present the cropper view controlle
     [super viewDidLoad];
     AddPictureScroller *addPictureScroller = [[AddPictureScroller alloc] initWithFrame:CGRectMake(0, 100, 320, 100) inView:self.view];
     addPictureScroller.delegate = self;
+    addPictureScroller.maxImageCount = 4;//default is max integer.
   }
   ```
   It will do all the other jobs for you. Enjoy its convenience!
