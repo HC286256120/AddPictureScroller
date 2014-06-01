@@ -93,6 +93,17 @@
     [self refreshScrollView];
 }
 
+-(void)removeAllImageView{
+    for (UIImageView *imageView in imageViewArray) {
+        [imageView removeFromSuperview];
+    }
+    [imageViewArray removeAllObjects];
+    
+    addButton.frame = CGRectMake(0, 0, addButton.frame.size.width, addButton.frame.size.height);
+    addButton.hidden = NO;
+    [self refreshScrollView];
+}
+
 -(void)removeImageView:(UIImageView *)imageView{
     NSInteger picIndex = [imageViewArray indexOfObject:imageView];
     if (picIndex == NSNotFound) {

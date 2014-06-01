@@ -21,5 +21,6 @@
 
 -(id)initWithFrame:(CGRect)frame inView:(UIView *)view;
 -(void)addPicture:(UIImage *)image;
+-(void)removeAllImageView;
 -(void)removeImageView:(UIImageView *)imageView;
 @end
